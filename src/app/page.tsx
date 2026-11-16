@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { ClosingSection } from "@/components/invitation/ClosingSection";
 import { CoupleSection } from "@/components/invitation/CoupleSection";
 import { EventDetails } from "@/components/invitation/EventDetails";
@@ -11,6 +10,7 @@ import { wedding } from "@/data/wedding";
 import type { WeddingCalendar } from "@/lib/calendar";
 import { getCoupleNames, getMonogram } from "@/lib/format";
 import { buildShareText, buildWhatsAppUrl } from "@/lib/sharing";
+import type { Metadata } from "next";
 
 const coupleNames = getCoupleNames(wedding.couple);
 const monogram = getMonogram(wedding.couple);

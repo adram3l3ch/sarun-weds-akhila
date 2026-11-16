@@ -8,15 +8,15 @@ export interface ShareDetails {
 
 export function buildShareText({ title, coupleNames, displayDate, venueName, url }: ShareDetails) {
    return [
-      `*${title}*`,
+      `✨ *${title}* ✨`,
       "",
-      `_With the blessings of our families, and with hearts full of gratitude, we invite you to share in the beginning of our life together._`,
+      `💗 _With the blessings of our families, and with hearts full of gratitude, we invite you to share in the beginning of our life together._`,
       "",
       "*Wedding Ceremony*",
       "",
-      `${displayDate} · ${venueName}`,
+      `📅 ${displayDate} · ${venueName}`,
       "",
-      `_View the invitation: *${url}*_`,
+      `_View the invitation:_ ${url}`,
       "",
       "We look forward to celebrating with you! 💕",
    ].join("\n");

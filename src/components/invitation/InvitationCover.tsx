@@ -1,13 +1,13 @@
 "use client";
 
-import { AnimatePresence, motion } from "motion/react";
-import { ArrowDown } from "lucide-react";
 import { Eyebrow } from "@/components/shared/Eyebrow";
 import { JasmineSprig } from "@/components/shared/JasmineSprig";
 import { Monogram } from "@/components/shared/Monogram";
 import type { CoupleData, InvitationData } from "@/types/wedding";
+import { ArrowDown } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
+import PetalFall from "../overlays/PetalFall";
 import { useInvitation } from "./InvitationContext";
-import { actionClass } from "@/lib/styles";
 
 interface InvitationCoverProps {
    couple: CoupleData;
@@ -38,6 +38,8 @@ export function InvitationCover({ couple, invitation, monogram }: InvitationCove
                }}
                className="fixed inset-0 z-[70] overflow-y-auto bg-[radial-gradient(130%_95%_at_50%_32%,#fcf8f1_0%,#f8f3e9_56%,#f1e8d8_100%)]"
             >
+               <PetalFall />
+
                <div aria-hidden="true" className="kasavu-selvedge pointer-events-none absolute inset-x-0 top-0 h-4 opacity-75" />
                <div aria-hidden="true" className="kasavu-selvedge pointer-events-none absolute inset-x-0 bottom-0 h-4 rotate-180 opacity-75" />
 

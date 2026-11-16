@@ -1,0 +1,60 @@
+.petalContainer {
+   position: fixed;
+   inset: 0;
+   overflow: hidden;
+   pointer-events: none;
+   z-index: 20;
+   isolation: isolate;
+}
+
+.petal {
+   position: absolute;
+   top: -20px;
+   left: var(--left);
+   width: var(--size);
+   height: calc(var(--size) * 1.5);
+
+   background: linear-gradient(145deg, #fffdf5 0%, #eee4d2 75%, #d9c6a5 100%);
+
+   border-radius: 80% 10% 80% 10%;
+   opacity: var(--opacity);
+
+   transform: rotate(var(--rotation));
+   animation: petalFall var(--duration) var(--delay) linear infinite;
+
+   filter: drop-shadow(0 1px 2px rgb(65 48 25 / 10%));
+   will-change: transform;
+}
+
+.gold {
+   background: linear-gradient(145deg, #d8c39a, #b69a69 80%);
+}
+
+@keyframes petalFall {
+   0% {
+      transform: translate3d(0, -5vh, 0) rotate(0deg);
+   }
+
+   25% {
+      transform: translate3d(calc(var(--drift) * 0.4), 25vh, 0) rotate(100deg);
+   }
+
+   50% {
+      transform: translate3d(calc(var(--drift) * -0.3), 50vh, 0) rotate(220deg);
+   }
+
+   75% {
+      transform: translate3d(calc(var(--drift) * 0.7), 75vh, 0) rotate(300deg);
+   }
+
+   100% {
+      transform: translate3d(var(--drift), 110vh, 0) rotate(420deg);
+   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+   .petal {
+      display: none;
+      animation: none;
+   }
+}
