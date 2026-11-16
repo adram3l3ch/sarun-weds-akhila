@@ -1,9 +1,9 @@
-import Image from "next/image";
-import { ArrowUpRight, MapPin } from "lucide-react";
 import { Eyebrow } from "@/components/shared/Eyebrow";
 import { Reveal } from "@/components/shared/Reveal";
 import { actionClass } from "@/lib/styles";
 import type { VenueData } from "@/types/wedding";
+import { ArrowUpRight, MapPin } from "lucide-react";
+import Image from "next/image";
 
 interface VenueSectionProps {
    venue: VenueData;
@@ -57,10 +57,6 @@ export function VenueSection({ venue }: VenueSectionProps) {
                         />
                         <span aria-hidden="true" className="pointer-events-none absolute inset-0 ring-1 ring-ivory/20 ring-inset" />
                      </div>
-                     <figcaption className="mt-4 flex items-baseline justify-between gap-4">
-                        <span className="text-[0.5rem] font-medium tracking-[0.28em] text-teak/35 uppercase">{venue.name}</span>
-                        <span className="font-display text-sm text-teak/40 italic">Venue photograph</span>
-                     </figcaption>
                   </figure>
                </Reveal>
             </div>
