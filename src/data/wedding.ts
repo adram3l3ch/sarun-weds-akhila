@@ -86,7 +86,7 @@ export const wedding: WeddingData = {
    },
 
    website: {
-      url: "https://example.com/sarun-weds-akhila",
+      url: "https://sarun-weds-akhila.vercel.app/",
       title: "Sarun & Akhila · Wedding Invitation",
       description: "Join Sarun and Akhila as they celebrate their wedding on Sunday, 06 December 2026",
       ogImage: "/images/og-cover.png",

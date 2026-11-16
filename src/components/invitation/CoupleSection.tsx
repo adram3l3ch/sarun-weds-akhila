@@ -38,29 +38,29 @@ export function CoupleSection({ couple, locationLine }: CoupleSectionProps) {
 
                <div className="lg:col-span-7 lg:pl-4">
                   <Reveal delay={0.08}>
-                     <Eyebrow>Together with our families</Eyebrow>
+                     <Eyebrow className="text-center lg:text-left">Together with our families</Eyebrow>
                      <h2
                         id="couple-heading"
-                        className="mt-6 font-display text-[clamp(3.1rem,8.2vw,5.7rem)] leading-[0.92] font-light tracking-[-0.03em] text-teak"
+                        className="mt-6 font-display text-[clamp(3.1rem,8.2vw,5.7rem)] leading-[0.92] font-light tracking-[-0.03em] text-teak text-center lg:text-left"
                      >
                         <span className="block">{couple.partnerOne}</span>
-                        <span aria-hidden="true" className="my-2 flex items-center gap-4 sm:my-3">
-                           <span className="h-px w-10 bg-gold/45 sm:w-14" />
-                           <span className="font-display text-[0.42em] font-normal text-gold italic">&amp;</span>
+                        <span aria-hidden="true" className="my-2 flex items-center gap-4 sm:my-3 justify-center lg:justify-start">
+                           <span className="h-px w-10 bg-gold/45 sm:w-14 hidden lg:block" />
+                           <span className="font-display text-[0.52em] font-normal text-gold italic">&amp;</span>
                         </span>
                         <span className="block">{couple.partnerTwo}</span>
                      </h2>
                   </Reveal>
 
                   <Reveal delay={0.16}>
-                     <p className="pretty mt-8 max-w-md font-display text-[1.35rem] leading-[1.5] font-light text-teak/70 italic sm:text-[1.6rem]">
+                     <p className="pretty mt-8 max-w-md font-display text-[1.35rem] leading-[1.5] font-light text-teak/70 italic sm:text-[1.6rem] text-center lg:text-left">
                         {couple.introduction}
                      </p>
                   </Reveal>
 
                   <Reveal delay={0.24}>
-                     <div className="mt-9 flex items-center gap-2.5">
-                        <span aria-hidden="true" className="h-px w-10 bg-gold/40" />
+                     <div className="mt-9 flex items-center gap-2.5 justify-center lg:justify-start">
+                        <span aria-hidden="true" className="h-px w-10 bg-gold/40 hidden lg:block" />
                         <span className="text-[0.5625rem] font-medium tracking-[0.32em] text-moss uppercase">{locationLine}</span>
                      </div>
                   </Reveal>

@@ -62,7 +62,7 @@ export function ClosingSection({ couple, monogram, closing, invitation, features
                      {features.enableRsvp ? <RsvpButton label="RSVP" variant="primary" className="w-full sm:w-auto" /> : null}
 
                      {features.enableCalendar && calendar ? (
-                        <CalendarButton calendar={calendar} variant="outline" className="w-full sm:w-auto" />
+                        <CalendarButton calendar={calendar} variant={features.enableRsvp ? "outline" : "primary"} className="w-full sm:w-auto" />
                      ) : null}
 
                      {features.enableWhatsappShare && whatsappUrl ? (

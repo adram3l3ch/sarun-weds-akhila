@@ -123,7 +123,7 @@ export function EventDetails({ invitation, events, venueName, calendar }: EventD
 
                   {calendar ? (
                      <Reveal delay={0.1} className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
-                        <CalendarButton calendar={calendar} variant="outline" />
+                        <CalendarButton calendar={calendar} variant="primary" />
                         <p className="text-[0.6875rem] leading-relaxed text-teak/45">
                            Adds {calendar.events.length > 1 ? "both celebrations" : "the celebration"} to your calendar.
                         </p>
