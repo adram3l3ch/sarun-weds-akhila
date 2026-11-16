@@ -45,6 +45,7 @@ export const metadata: Metadata = {
    alternates: {
       canonical: wedding.website.url,
    },
+   icons: ["/favicon.ico"],
    openGraph: {
       type: "website",
       locale: "en_IN",
@@ -57,6 +58,7 @@ export const metadata: Metadata = {
             url: wedding.website.ogImage,
             width: 1200,
             height: 630,
+            type: "image/png",
             alt: wedding.website.ogImageAlt ?? wedding.website.title,
          },
       ],
