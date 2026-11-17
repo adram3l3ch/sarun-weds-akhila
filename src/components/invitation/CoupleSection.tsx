@@ -36,7 +36,7 @@ export function CoupleSection({ couple, locationLine }: CoupleSectionProps) {
                   </figure>
                </Reveal>
 
-               <div className="lg:col-span-7 lg:pl-4">
+               <div className="lg:col-span-7 lg:pl-4 mx-auto lg:mx-0">
                   <Reveal delay={0.08}>
                      <Eyebrow className="text-center lg:text-left">Together with our families</Eyebrow>
                      <h2

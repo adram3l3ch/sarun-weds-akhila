@@ -1,10 +1,14 @@
+"use client";
+
 import { CalendarButton } from "@/components/shared/CalendarButton";
 import { Eyebrow } from "@/components/shared/Eyebrow";
 import { Reveal } from "@/components/shared/Reveal";
 import type { WeddingCalendar } from "@/lib/calendar";
 import { formatTime, getDateParts } from "@/lib/format";
+import { actionClass } from "@/lib/styles";
 import type { InvitationData, WeddingEvent } from "@/types/wedding";
-import { Clock, Sun } from "lucide-react";
+import { ArrowUpRight, Clock, Sun } from "lucide-react";
+import { useParams } from "next/navigation";
 
 interface EventDetailsProps {
    invitation: InvitationData;
@@ -16,6 +20,7 @@ interface EventDetailsProps {
 
 export function EventDetails({ invitation, events, venueName, calendar }: EventDetailsProps) {
    const date = getDateParts(invitation.date);
+   const { side } = useParams<{ side: string }>();
 
    return (
       <section aria-labelledby="event-details-heading" className="border-y border-gold/25 bg-sand/30 px-6 py-20 sm:px-10 sm:py-24 lg:py-28">
@@ -59,6 +64,7 @@ export function EventDetails({ invitation, events, venueName, calendar }: EventD
                <div className="lg:col-span-8">
                   <ol className="border-t border-teak/10">
                      {events.map((event, index) => {
+                        if (event.side && side && event.side !== side) return null;
                         const eventDate = getDateParts(event.date);
 
                         return (
@@ -113,6 +119,13 @@ export function EventDetails({ invitation, events, venueName, calendar }: EventD
 
                                     {event.venueName ? (
                                        <p className="mt-3 text-[0.5625rem] font-medium tracking-[0.26em] text-teak/40 uppercase">{event.venueName}</p>
+                                    ) : null}
+
+                                    {event.location ? (
+                                       <a href={event.location} target="_blank" rel="noopener noreferrer" className={actionClass("outline", "mt-4")}>
+                                          Get directions
+                                          <ArrowUpRight className="size-3.5" strokeWidth={1.5} aria-hidden="true" />
+                                       </a>
                                     ) : null}
                                  </div>
                               </Reveal>

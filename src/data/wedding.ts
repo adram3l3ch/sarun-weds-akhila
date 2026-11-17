@@ -39,14 +39,17 @@ export const wedding: WeddingData = {
 
    events: [
       {
-         id: "reception",
+         id: "reception-bride",
          kind: "reception",
          title: "Reception",
+         side: "bride",
          kicker: "An Evening Together",
          date: "2026-12-05",
          day: "Saturday",
          startTime: "",
          endTime: "21:30",
+         location: "https://maps.app.goo.gl/dxXdSPUd25tMnj9M9",
+         venueName: "At the Bride's Home",
       },
       {
          id: "muhurtham",
@@ -60,6 +63,19 @@ export const wedding: WeddingData = {
          muhurtham: "11:51 AM – 12:13 PM",
          ceremony: "",
          details: "",
+      },
+      {
+         id: "reception-groom",
+         kind: "reception",
+         title: "Reception",
+         side: "groom",
+         kicker: "An Evening Together",
+         date: "2026-12-07",
+         day: "Monday",
+         venueName: "At the Groom's Home",
+         startTime: "",
+         endTime: "21:30",
+         location: "https://maps.app.goo.gl/9tgvBRT3A3HS1MGs7?g_st=ic",
       },
    ],
 
